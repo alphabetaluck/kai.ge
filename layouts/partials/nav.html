@@ -1,9 +1,13 @@
 <div class="nav_container animated fadeInDown">
   <div class="site_nav" id="site_nav">
     <ul>
-      {{ range.Site.Menus.main }}
+      {{ range .Site.Menus.main }}
       <li>
-        <a href="{{ .URL | safeURL }}.html">{{ .Name }}</a>
+        {{ if or (hasPrefix .URL "http://") (hasPrefix .URL "https://") }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ else }}
+        <a href="{{ .URL | safeURL }}">{{ .Name }}</a>
+        {{ end }}
       </li>
       {{ end }}
     </ul>
