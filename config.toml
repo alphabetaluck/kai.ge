@@ -50,6 +50,11 @@ uglyurls = true
   weight = 40
   identifier = "about"
   url = "/about"
+[[menu.main]]
+  name = "信息流"
+  weight = 50
+  identifier = "feed"
+  url = "https://feed.kai.ge"
 
 [params]
   subTitle = "kai.ge"                                       # site's subTitle  # 网站二级标题
@@ -73,5 +78,5 @@ uglyurls = true
   visitor = true
 
 [social]
-  github = "https://github.com/udbmnm"
+  github = "https://github.com/alphabetaluck"
   twitter = "https://x.com/AlphaBetaLuck"
